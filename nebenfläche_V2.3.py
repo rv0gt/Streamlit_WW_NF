@@ -70,7 +70,7 @@ if st.session_state.df is not None:
     grouped_df = st.session_state.df.groupby(['haus', 'category', 'Faktor'])['Area_srf'].sum().reset_index()
     grouped_df = st.data_editor(grouped_df)
 
-    if st.button("Nebenfläche aktualisieren:"):
+    if st.button("Nebenfläche aktualisieren"):
         # Perform the left join
         df_join = grouped_df[['haus', 'category', 'Faktor']]
         st.session_state.df_update = st.session_state.df
