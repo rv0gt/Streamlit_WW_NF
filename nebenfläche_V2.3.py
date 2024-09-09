@@ -78,7 +78,7 @@ if st.session_state.df is not None:
         st.session_state.df_update = st.session_state.df_update.merge(df_join, on=['haus', 'category'], how='left')
         st.session_state.df_update['NF'] = st.session_state.df_update['Faktor'] * st.session_state.df_update['Area_srf']
         #st.session_state.df_update.head()
-        columns_to_display = ['OBJECTID', 'haus', 'Area_srf', 'category', 'Parkplatz', 'Faktor', 'NF']
+        columns_to_display = ['OBJECTID', 'haus', 'Area_srf', 'category', 'Faktor', 'NF']
         st.write(st.session_state.df_update[columns_to_display])
 
     # Button zum Hochladen der Daten
